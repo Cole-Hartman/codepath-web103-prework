@@ -5,9 +5,11 @@ export default {
     extend: {
       colors: {
         cbrown: {
-          l: "#6f4f28", // Lighter shade
-          DEFAULT: "#543310", // Base color
-          d: "#3b1f0c", // Darker shade
+          // DEFAULT: "#010101",
+          1: "#F8F4E1", 
+          2: "#AF8F6F",
+          3: "#74512D", 
+          4: "#543310",
         },
       },
     },
