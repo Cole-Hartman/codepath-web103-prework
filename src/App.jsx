@@ -1,38 +1,52 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Card from "./components/Card";
-import Add from "./routes/Add";
+import Header from "./components/Header";
 import { Link } from "react-router-dom";
 import supabase from "./config/supabaseClient";
 
 function App() {
-  console.log(supabase);
+  const [fetchError, setFetchError] = useState(null);
+  const [creators, setCreators] = useState(null);
+
+  useEffect(() => {
+    const fetchCreators = async () => {
+      const { data, error } = await supabase.from("creators").select();
+
+      if (error) {
+        setFetchError("Could not fetch creator data");
+        console.log(error);
+        setCreators(null);
+      }
+      if (data) {
+        setCreators(data);
+        setFetchError(null);
+      }
+    };
+
+    fetchCreators();
+  }, []);
 
   return (
     <>
+      <Header />
       <div className="bg-gray-800 h-screen flex flex-col items-center font-mono hidden sm:block overflow-hidden">
-        <div className="bg-black text-white text-3xl px-5 py-2 h-1/6 w-full flex flex-col  justify-center items-center">
-          <h1 id="heading" className="my-3">
-            CREATORVERSE
-          </h1>
-          <button
-            type="button"
-            className="border border-gray-800 bg-gray-800 px-3 py-1 mb-2 rounded-xl hover:bg-gray-700 hover:border-gray-700 hover:shadow-lg text-white"
-          >
-            <Link to={"add"}>ADD A CREATOR</Link>
-          </button>
-        </div>
         <section
           id="cards grid"
           className="h-screen w-full grid grid-cols-3 grid-rows-3"
         >
-          {/* <Add /> */}
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {fetchError && <p>{fetchError}</p>}
+          {creators?.map((creator) => (
+            <Card
+              key={creator.id}
+              name={creator.name}
+              img={creator.img}
+              youtube={creator.youtube}
+              instagram={creator.instagram}
+              x={creator.x}
+              description={creator.description}
+            />
+          ))}
         </section>
       </div>
       <h1 className="block sm:hidden text-3xl font-bold text-center pt-52">

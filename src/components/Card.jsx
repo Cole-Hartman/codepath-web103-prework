@@ -1,15 +1,21 @@
-import youtube from "../assets/youtube.svg";
-import instagram from "../assets/instagram.svg";
-import x from "../assets/x.svg";
+import youtubeIcon from "../assets/youtube.svg";
+import instagramIcon from "../assets/instagram.svg";
+import xIcon from "../assets/x.svg";
 
-export default function Card() {
+export default function Card({
+  name,
+  img,
+  youtube,
+  instagram,
+  x,
+  description,
+}) {
   return (
     <>
       <div
         className="bg-cbrown-3 m-2 rounded-lg flex flex-col justify-center items-left font-mono bg-custom-gradient text-white overflow-hidden"
         style={{
-          backgroundImage:
-            "url(https://media.cnn.com/api/v1/images/stellar/prod/gsfc-20171208-archive-e001982-orig.jpg?c=original)",
+          backgroundImage: `url(${img})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -19,27 +25,48 @@ export default function Card() {
           id="name"
           className="bg-black px-2 my-1 rounded-xl bg-opacity-50 text-lg"
         >
-          COLE HARTMAN
+          {name}
         </div>
         <div
           id="icons"
           className="bg-black px-2 py-1 my-1 rounded-xl bg-opacity-50"
         >
-          <button type="submit" id="youtube">
-            <img src={youtube} alt="youtube icon" className="h-10 pt-1 px-1" />
-          </button>
-          <button type="submit" id="instagram">
-            <img src={instagram} alt="instagram icon" className="h-9 px-1" />
-          </button>
-          <button type="submit" id="x">
-            <img src={x} alt="x icon" className="h-9 px-1" />
-          </button>
+          {youtube && (
+            <button type="submit" id="youtube">
+              <a href={youtube} rel="noreferrer" target="_blank">
+                <img
+                  src={youtubeIcon}
+                  alt="youtube icon"
+                  className="h-10 pt-1 px-1"
+                />
+              </a>
+            </button>
+          )}
+
+          {instagram && (
+            <button type="submit" id="instagram">
+              <a href={instagramIcon} rel="nonreferrer">
+                <img
+                  src={instagramIcon}
+                  alt="instagram icon"
+                  className="h-9 px-1"
+                />
+              </a>
+            </button>
+          )}
+          {x && (
+            <button type="submit" id="x" rel="nonreferrer">
+              <a href={instagram}>
+                <img src={xIcon} alt="x icon" className="h-9 px-1" />
+              </a>
+            </button>
+          )}
         </div>
         <div
           id="description"
           className="bg-black px-2 my-1 rounded-xl bg-opacity-50"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+          {description}
         </div>
         <div className="mt-4">
           <button

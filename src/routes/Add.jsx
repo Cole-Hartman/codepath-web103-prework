@@ -1,95 +1,138 @@
 import { useState } from "react";
+import Header from "../components/Header";
 
 export default function Add() {
-  const [formData, setFormData] = useState({
-    name: "",
-    image: "",
-    youtube: "",
-    x: "",
-    description: "",
-  });
+  const [name, setName] = useState("");
+  const [img, setImg] = useState("");
+  const [youtube, setYoutube] = useState("");
+  const [instagram, setInstagram] = useState("");
+  const [x, setX] = useState("");
+  const [description, setDescription] = useState("");
 
-  //   const handleChage = (e) => {
-  //     const { name, value } = e.target
-  //     setFormData(e.target.value)
-  //   }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("form submitted");
+  };
 
   return (
     <>
-      <h1>Add Component</h1>
-      {/* <div className="form-container">
-        <h2 className="form-title">Input Form</h2>
-        <form onSubmit={handleSubmit} className="input-form">
-          <div className="form-group">
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Enter name"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="image">Image URL:</label>
-            <input
-              type="url"
-              id="image"
-              name="image"
-              value={formData.image}
-              onChange={handleChange}
-              placeholder="Enter image URL"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="youtube">YouTube URL:</label>
-            <input
-              type="url"
-              id="youtube"
-              name="youtube"
-              value={formData.youtube}
-              onChange={handleChange}
-              placeholder="Enter YouTube URL"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="instagram">Instagram URL:</label>
-            <input
-              type="url"
-              id="instagram"
-              name="instagram"
-              value={formData.instagram}
-              onChange={handleChange}
-              placeholder="Enter Instagram URL"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="x">X (formerly Twitter) URL:</label>
-            <input
-              type="url"
-              id="x"
-              name="x"
-              value={formData.x}
-              onChange={handleChange}
-              placeholder="Enter X (Twitter) URL"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="description">Description:</label>
-            <textarea
-              id="description"
-              name="description"
-              value={formData.description}
-              onChange={handleChange}
-              placeholder="Enter description"
-            />
-          </div>
-          <button type="submit" className="submit-button">
-            Submit
-          </button>
-        </form>
-      </div> */}
+      <Header />
+      <div className="bg-gray-800 w-full h-screen pt-10">
+        <div className="max-w-md mx-auto bg-white shadow-md rounded-lg p-6">
+          <h2 className="text-2xl font-bold mb-6 text-center">Input Form</h2>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="form-group">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Name:
+              </label>
+              <input
+                required
+                type="text"
+                id="name"
+                name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Enter name"
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              />
+            </div>
+            <div className="form-group">
+              <label
+                htmlFor="image"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Image URL:
+              </label>
+              <input
+                type="url"
+                id="image"
+                name="image"
+                value={img}
+                onChange={(e) => setImg(e.target.value)}
+                placeholder="Enter image URL"
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              />
+            </div>
+            <div className="form-group">
+              <label
+                htmlFor="youtube"
+                className="block text-sm font-medium text-gray-700"
+              >
+                YouTube URL:
+              </label>
+              <input
+                type="url"
+                id="youtube"
+                name="youtube"
+                value={youtube}
+                onChange={(e) => setYoutube(e.target.value)}
+                placeholder="Enter YouTube URL"
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              />
+            </div>
+            <div className="form-group">
+              <label
+                htmlFor="instagram"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Instagram URL:
+              </label>
+              <input
+                type="url"
+                id="instagram"
+                name="instagram"
+                value={instagram}
+                onChange={(e) => setInstagram(e.target.value)}
+                placeholder="Enter Instagram URL"
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              />
+            </div>
+            <div className="form-group">
+              <label
+                htmlFor="x"
+                className="block text-sm font-medium text-gray-700"
+              >
+                X URL:
+              </label>
+              <input
+                type="url"
+                id="x"
+                name="x"
+                value={x}
+                onChange={(e) => setX(e.target.value)}
+                placeholder="Enter X (Twitter) URL"
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              />
+            </div>
+            <div className="form-group">
+              <label
+                htmlFor="description"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Description:
+              </label>
+              <textarea
+                id="description"
+                name="description"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                placeholder="Enter description"
+                maxLength={50}
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-blue-500 text-white py-2 px-4 rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
     </>
   );
 }
