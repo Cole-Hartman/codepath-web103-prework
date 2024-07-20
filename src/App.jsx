@@ -3,8 +3,11 @@ import "./App.css";
 import Card from "./components/Card";
 import Add from "./routes/Add";
 import { Link } from "react-router-dom";
+import supabase from "./config/supabaseClient";
 
 function App() {
+  console.log(supabase);
+
   return (
     <>
       <div className="bg-gray-800 h-screen flex flex-col items-center font-mono hidden sm:block overflow-hidden">
