@@ -6,9 +6,9 @@ export default {
       colors: {
         cbrown: {
           // DEFAULT: "#010101",
-          1: "#F8F4E1", 
+          1: "#F8F4E1",
           2: "#AF8F6F",
-          3: "#74512D", 
+          3: "#74512D",
           4: "#543310",
         },
       },
@@ -17,7 +17,7 @@ export default {
   plugins: [
     ({ addVariant }) => {
       addVariant("child", "& > *");
-      // addVariant("child-hover", "& > *:hover");
+      addVariant("child-hover", "& > *:hover");
     },
   ],
 };
