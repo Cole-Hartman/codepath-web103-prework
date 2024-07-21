@@ -15,7 +15,6 @@ export default function Add() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("form submitted");
     const { data, error } = await supabase
       .from("creators")
       .insert([{ name, img, youtube, instagram, x, description }])
@@ -25,7 +24,6 @@ export default function Add() {
       alert(error);
     }
     if (data) {
-      console.log(data);
       navigate("/");
     }
   };

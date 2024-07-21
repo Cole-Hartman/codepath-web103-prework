@@ -35,18 +35,24 @@ function App() {
           className="h-screen w-full grid grid-cols-3 grid-rows-3"
         >
           {fetchError && <p>{fetchError}</p>}
-          {creators?.map((creator) => (
-            <Card
-              key={creator.id}
-              name={creator.name}
-              img={creator.img}
-              youtube={creator.youtube}
-              instagram={creator.instagram}
-              x={creator.x}
-              description={creator.description}
-              id={creator.id}
-            />
-          ))}
+          {creators?.length > 0 ? (
+            creators?.map((creator) => (
+              <Card
+                key={creator.id}
+                name={creator.name}
+                img={creator.img}
+                youtube={creator.youtube}
+                instagram={creator.instagram}
+                x={creator.x}
+                description={creator.description}
+                id={creator.id}
+              />
+            ))
+          ) : (
+            <div className="flex justify-center items-center row-span-2 col-span-3 text-3xl text-white">
+              <h1>No Creators</h1>
+            </div>
+          )}
         </section>
       </div>
       <h1 className="block sm:hidden text-3xl font-bold text-center pt-52">

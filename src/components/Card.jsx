@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import supabase from "../config/supabaseClient";
 import youtubeIcon from "../assets/youtube.svg";
 import instagramIcon from "../assets/instagram.svg";
 import xIcon from "../assets/x.svg";
@@ -12,10 +14,28 @@ export default function Card({
   description,
   id,
 }) {
+  const [refresh, setRefresh] = useState(0);
+
+  const handleDelete = async () => {
+    const { data, error } = await supabase
+      .from("creators")
+      .delete()
+      .eq("id", id)
+      .select();
+    if (error) {
+      console.log(id);
+      console.log("Error deleting card");
+    }
+    if (data) {
+      console.log("creator deleted");
+      setRefresh((refresh) => refresh + 1);
+    }
+  };
+
   return (
     <>
       <div
-        className="bg-cbrown-3 m-2 rounded-lg flex flex-col justify-center items-left font-mono bg-custom-gradient text-white overflow-hidden"
+        className="bg-black m-2 rounded-lg flex flex-col justify-center items-left font-mono bg-custom-gradient text-white overflow-hidden"
         style={{
           backgroundImage: `url(${img})`,
           backgroundSize: "cover",
@@ -80,6 +100,7 @@ export default function Card({
           <button
             type="submit"
             className="border border-black rounded-xl px-4 py-2 bg-black mx-3 hover:border-gray-700 hover:bg-gray-700 hover:shadow-lg"
+            onClick={handleDelete}
           >
             DELETE
           </button>
