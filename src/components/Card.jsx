@@ -67,7 +67,7 @@ export default function Card({
 
           {instagram && (
             <button type="submit" id="instagram">
-              <a href={instagramIcon} rel="nonreferrer">
+              <a href={instagram} rel="noreferrer" target="_blank">
                 <img
                   src={instagramIcon}
                   alt="instagram icon"
@@ -77,8 +77,8 @@ export default function Card({
             </button>
           )}
           {x && (
-            <button type="submit" id="x" rel="nonreferrer">
-              <a href={x}>
+            <button type="submit" id="x">
+              <a href={x} rel="noreferrer" target="_blank">
                 <img src={xIcon} alt="x icon" className="h-9 px-1" />
               </a>
             </button>

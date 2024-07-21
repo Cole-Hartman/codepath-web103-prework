@@ -44,7 +44,7 @@ export default function View() {
     <>
       <Header />
       <section className="w-full h-screen bg-gray-800 flex justify-center pt-10 text-3xl text-white gap-10">
-        <div className="flex gap-10 mr-14">
+        <div className="flex gap-10 mr-52">
           <div className="">
             {img && (
               <img
@@ -71,7 +71,7 @@ export default function View() {
                 </a>
               )}
               {instagram && (
-                <a href={instagram} rel="nonreferrer">
+                <a href={instagram} rel="noreferrer" target="_blank">
                   <img
                     src={instagramIcon}
                     alt="instagram icon"
@@ -80,7 +80,7 @@ export default function View() {
                 </a>
               )}
               {x && (
-                <a href={x}>
+                <a href={x} rel="noreferrer" target="_blank">
                   <img src={xIcon} alt="x icon" className="h-9 px-1" />
                 </a>
               )}
