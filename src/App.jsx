@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Card from "./components/Card";
 import Header from "./components/Header";
-import { Link } from "react-router-dom";
 import supabase from "./config/supabaseClient";
 
 function App() {
@@ -45,6 +44,7 @@ function App() {
               instagram={creator.instagram}
               x={creator.x}
               description={creator.description}
+              id={creator.id}
             />
           ))}
         </section>

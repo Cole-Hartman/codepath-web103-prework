@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import youtubeIcon from "../assets/youtube.svg";
 import instagramIcon from "../assets/instagram.svg";
 import xIcon from "../assets/x.svg";
@@ -9,6 +10,7 @@ export default function Card({
   instagram,
   x,
   description,
+  id,
 }) {
   return (
     <>
@@ -73,7 +75,7 @@ export default function Card({
             type="submit"
             className="border border-black rounded-xl px-4 py-2 bg-black mx-3 hover:border-gray-700 hover:bg-gray-700 hover:shadow-lg"
           >
-            INFO
+            <Link to={`/view/${id}`}>VIEW</Link>
           </button>
           <button
             type="submit"
