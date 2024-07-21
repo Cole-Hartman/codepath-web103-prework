@@ -30,7 +30,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [x] Additional error handling for various API call scenarios.
+- [x] Error handling for various API call scenarios.
 
 ## Video Walkthrough
 
