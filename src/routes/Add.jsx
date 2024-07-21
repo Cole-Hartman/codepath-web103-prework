@@ -27,8 +27,6 @@ export default function Add() {
     if (data) {
       console.log(data);
       navigate("/");
-    } else {
-      console.log("bruh");
     }
   };
 
