@@ -47,7 +47,7 @@ GIF created with LICEcap
 
 ## Notes
 
-During the process, I found that styling for both functionality and aesthetics while maintaining 100% responsiveness required careful consideration and some tweaking. Overcoming the various hurdles refined my skills in React development, TailwindCSS and API integration.
+During the process, I found that building CreatorVerse was a rewarding challenge, creating a fluent CRUD web app for collecting and displaying content creators. For me, the main challenges included managing async API calls, dynamic routing for unique URLs, and integrating Tailwind CSS for flexible styling. I deeply enjoyed leveraging Vite, React, and Tailwind CSS for this project.
 
 ## License
 
