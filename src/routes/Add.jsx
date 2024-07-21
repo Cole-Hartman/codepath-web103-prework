@@ -1,7 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
+import supabase from "../config/supabaseClient";
 
 export default function Add() {
+  const navigate = useNavigate();
+
   const [name, setName] = useState("");
   const [img, setImg] = useState("");
   const [youtube, setYoutube] = useState("");
@@ -9,9 +13,23 @@ export default function Add() {
   const [x, setX] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("form submitted");
+    const { data, error } = await supabase
+      .from("creators")
+      .insert([{ name, img, youtube, instagram, x, description }])
+      .select();
+    if (error) {
+      console.log(error);
+      alert(error);
+    }
+    if (data) {
+      console.log(data);
+      navigate("/");
+    } else {
+      console.log("bruh");
+    }
   };
 
   return (
