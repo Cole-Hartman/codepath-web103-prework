@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import supabase from "../config/supabaseClient";
 import youtubeIcon from "../assets/youtube.svg";
@@ -13,8 +13,9 @@ export default function Card({
   x,
   description,
   id,
+  onDelete,
 }) {
-  const [refresh, setRefresh] = useState(0);
+  const navigate = useNavigate();
 
   const handleDelete = async () => {
     const { data, error } = await supabase
@@ -27,8 +28,7 @@ export default function Card({
       console.log("Error deleting card");
     }
     if (data) {
-      console.log("creator deleted");
-      setRefresh((refresh) => refresh + 1);
+      onDelete(id);
     }
   };
 

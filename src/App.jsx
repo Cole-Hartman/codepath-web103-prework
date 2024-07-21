@@ -26,6 +26,12 @@ function App() {
     fetchCreators();
   }, []);
 
+  const handleDelete = (id) => {
+    setCreators((prevCreators) => {
+      return prevCreators.filter((creator) => creator.id !== id);
+    });
+  };
+
   return (
     <>
       <Header />
@@ -46,6 +52,7 @@ function App() {
                 x={creator.x}
                 description={creator.description}
                 id={creator.id}
+                onDelete={handleDelete}
               />
             ))
           ) : (

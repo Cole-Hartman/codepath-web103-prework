@@ -44,7 +44,7 @@ export default function View() {
     <>
       <Header />
       <section className="w-full h-screen bg-gray-800 flex justify-center pt-10 text-3xl text-white gap-10">
-        <div className="flex gap-10 mr-52">
+        <div className="flex gap-10 mr-14">
           <div className="">
             {img && (
               <img
