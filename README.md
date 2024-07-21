@@ -1,10 +1,10 @@
-# WEB103 Prework - Creatorverse
+# WEB103 Prework - CreatorVerse
 
 Submitted by: **Cole Hartman**
 
 About this web app: **Creatorverse allows you to keep track of your favorite content creators!**
 
-Time spent: **14** hours
+Time spent: **9.5** hours
 
 ## Required Features
 
@@ -13,7 +13,7 @@ The following **required** functionality is completed:
 <!-- 👉🏿👉🏿👉🏿 Make sure to check off completed functionality below -->
 
 - [x] **A logical component structure in React is used to create the frontend of the app**
-- [x] **At least five content creators are displayed on the homepage of the app**
+- [ ] **At least five content creators are displayed on the homepage of the app**
 - [x] **Each content creator item includes their name, a link to their channel/page, and a short description of their content**
 - [x] **API calls use the async/await design pattern via Axios or fetch()**
 - [x] **Clicking on a content creator item takes the user to their details page, which includes their name, url, and description**
@@ -24,13 +24,13 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] Picocss is used to style HTML elements
-- [ ] The content creator items are displayed in a creative format, like cards instead of a list
-- [ ] An image of each content creator is shown on their content creator card
+- [x] TailwindCSS is used to style HTML elements
+- [x] The content creator items are displayed in a creative format, like cards instead of a list
+- [x] An image of each content creator is shown on their content creator card
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you added to improve the site's functionality!
+- [x] Additional error handling for multiple API call scenarios.
 
 ## Video Walkthrough
 
@@ -49,11 +49,11 @@ GIF created with ... 👉🏿 GIF tool here
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+During the process, I found that styling for both functionality and aesthetics while maintaining 100% responsiveness required careful consideration and some tweaking. Overcoming the various hurdles refined my skills in React development, TailwindCSS and API integration.
 
 ## License
 
-Copyright [👉🏿 yyyy] [👉🏿 name of copyright owner]
+Copyright [2024] [Cole Hartman]
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
