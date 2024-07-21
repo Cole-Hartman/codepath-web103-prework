@@ -35,7 +35,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className="bg-gray-800 h-screen flex flex-col items-center font-mono hidden sm:block overflow-hidden">
+      <div className="bg-gray-800 h-screen sm:flex flex-col items-center font-mono hidden sm:block overflow-hidden">
         <section
           id="cards grid"
           className="h-screen w-full grid grid-cols-3 grid-rows-3"
@@ -62,7 +62,7 @@ function App() {
           )}
         </section>
       </div>
-      <h1 className="block sm:hidden text-3xl font-bold text-center pt-52">
+      <h1 className="block bg-gray-800 h-screen sm:hidden text-3xl font-bold text-center pt-52">
         Mobile Not Supported
       </h1>
     </>

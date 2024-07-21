@@ -33,7 +33,7 @@ export default function Add() {
       <Header />
       <div className="bg-gray-800 w-full h-screen pt-10">
         <div className="max-w-md mx-auto bg-white shadow-md rounded-lg p-6">
-          <h2 className="text-2xl font-bold mb-6 text-center">Input Form</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center">Add a Creator</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="form-group">
               <label
