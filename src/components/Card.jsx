@@ -58,7 +58,7 @@ export default function Card({
           )}
           {x && (
             <button type="submit" id="x" rel="nonreferrer">
-              <a href={instagram}>
+              <a href={x}>
                 <img src={xIcon} alt="x icon" className="h-9 px-1" />
               </a>
             </button>
