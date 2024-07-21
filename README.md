@@ -36,9 +36,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<img src='https://imgur.com/gallery/prework-gif-BrVc3Ds' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-<!-- Replace this with whatever GIF tool you used! -->
+<img src="https://github.com/user-attachments/assets/af4b5044-43aa-43e1-bb25-9b3bbe58f5f8" alt="Prework GIF" style="height: 300px;">
 
 GIF created with LICEcap
 
