@@ -13,7 +13,7 @@ The following **required** functionality is completed:
 <!-- 👉🏿👉🏿👉🏿 Make sure to check off completed functionality below -->
 
 - [x] **A logical component structure in React is used to create the frontend of the app**
-- [ ] **At least five content creators are displayed on the homepage of the app**
+- [x] **At least five content creators are displayed on the homepage of the app**
 - [x] **Each content creator item includes their name, a link to their channel/page, and a short description of their content**
 - [x] **API calls use the async/await design pattern via Axios or fetch()**
 - [x] **Clicking on a content creator item takes the user to their details page, which includes their name, url, and description**
@@ -30,17 +30,15 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [x] Additional error handling for multiple API call scenarios.
+- [x] Error handling for various API call scenarios.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src="https://github.com/user-attachments/assets/af4b5044-43aa-43e1-bb25-9b3bbe58f5f8" alt="Prework GIF" style="height: 300px;">
 
-<!-- Replace this with whatever GIF tool you used! -->
-
-GIF created with ... 👉🏿 GIF tool here
+GIF created with LICEcap
 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
@@ -49,7 +47,7 @@ GIF created with ... 👉🏿 GIF tool here
 
 ## Notes
 
-During the process, I found that styling for both functionality and aesthetics while maintaining 100% responsiveness required careful consideration and some tweaking. Overcoming the various hurdles refined my skills in React development, TailwindCSS and API integration.
+During the process, I found that building CreatorVerse was a rewarding challenge, creating a fluent CRUD web app for collecting and displaying content creators. For me, the main challenges included managing async API calls, dynamic routing for unique URLs, and integrating Tailwind CSS for flexible styling. I deeply enjoyed leveraging Vite, React, and Tailwind CSS for this project.
 
 ## License
 
